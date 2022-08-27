@@ -41,20 +41,26 @@ const style = StyleSheet.create ({
     zipItem: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-evenly',
         margin: 25,
+        opacity: 0.6,
+        backgroundColor: 'white',
+        borderColor: 'black',
+        borderWidth: 5,
+        borderRadius: 10
     },
     zipPlace: {
         flex: 1,
-        fontSize: 15
-        
+        fontSize: 18,
+        paddingLeft: 20
     },
     zipCode: {
         flex: 1,
-        fontSize: 15,
+        fontSize: 18,
         paddingLeft: 100
     },
     imageFlatList: {
-        backgroundColor: '#fecfcc'
+        backgroundColor: '#fecfcc',
+        
     }
 });
