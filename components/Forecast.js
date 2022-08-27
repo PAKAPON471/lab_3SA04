@@ -2,13 +2,14 @@ import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
 
-export default function Forecast(props) {
+export default function Forecast({main, description, temp}) {
     return (
         <View >
-            <Text style={styles.mainStyle}>{props.main}</Text>
-            <Text style={styles.descriptionStyle}>{props.description}</Text>
-            <View>
-                <Text style={styles.tempStyle}>{props.temp} °C</Text>
+            <Text style={styles.mainStyle}>{main}</Text>
+            <Text style={styles.descriptionStyle}>{description}</Text>
+            <View style={styles.tempViewStyle}>
+                <Text style={styles.tempText}>{temp}</Text>
+                <Text style={styles.celciusText}> °C</Text>
             </View>
         </View>
     );
@@ -27,10 +28,17 @@ const styles = StyleSheet.create({
         margin: 30,
         textAlign: 'center'
     },
-    tempStyle: {
-        fontSize: 30,
-        color: 'white',
-        textAlign: 'center',
+    tempViewStyle: {
+        flexDirection: 'row',
+        justifyContent:'center'
     },
-
+    tempText: {
+        color: 'white',
+        fontSize: 30,
+    },
+    celciusText: {
+        color: 'white',
+        fontSize: 20,
+        paddingTop: 10
+    }
 });
