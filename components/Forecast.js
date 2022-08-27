@@ -4,7 +4,7 @@ import { Text, StyleSheet, View } from 'react-native';
 
 export default function Forecast({main, description, temp}) {
     return (
-        <View>
+        <View style={styles.bodyView}>
             <Text style={styles.mainStyle}>{main}</Text>
             <Text style={styles.descriptionStyle}>{description}</Text>
             <View style={styles.tempViewStyle}>
@@ -16,14 +16,17 @@ export default function Forecast({main, description, temp}) {
 }
 
 const styles = StyleSheet.create({
+    bodyView: {
+        paddingTop: 60
+    },
     mainStyle: {
-        fontSize: 40,
+        fontSize: 60,
         color: 'white',
         textAlign: 'center'
 
     },
     descriptionStyle: {
-        fontSize: 20,
+        fontSize: 30,
         color: 'white',
         margin: 30,
         textAlign: 'center'
@@ -35,11 +38,11 @@ const styles = StyleSheet.create({
     },
     tempText: {
         color: 'white',
-        fontSize: 30,
+        fontSize: 40,
     },
     celciusText: {
         color: 'white',
-        fontSize: 20,
+        fontSize: 26,
         paddingTop: 10
     }
 });
